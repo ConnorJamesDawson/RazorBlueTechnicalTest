@@ -4,9 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Task3DataImport T3 = new();
+            Task4FizzBuzz T4 = new();
 
-            T3.GrabDataFromCSV();
+            T4.FizzBuzz();
         }
     }
 }
