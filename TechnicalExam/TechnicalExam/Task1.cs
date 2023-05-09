@@ -15,25 +15,8 @@ public class Task1
         Dictionary<char, int> keyValuePairs1= new Dictionary<char, int>();
         Dictionary<char, int> keyValuePairs2= new Dictionary<char, int>();
 
-        foreach(char c in anagram1)
-        {
-            if(keyValuePairs1.ContainsKey(c))
-            {
-                keyValuePairs1[c]++;
-            }
-            else
-                keyValuePairs1.Add(c, 1);
-        }
-
-        foreach (char c in anagram2)
-        {
-            if (keyValuePairs2.ContainsKey(c))
-            {
-                keyValuePairs2[c]++;
-            }
-            else
-                keyValuePairs2.Add(c, 1);
-        }
+        CheckDictionary(keyValuePairs1, anagram1);
+        CheckDictionary(keyValuePairs2, anagram2);
 
         if(keyValuePairs1.Count == keyValuePairs2.Count)
         {
@@ -55,4 +38,16 @@ public class Task1
         return true;
     }
 
+    public static void CheckDictionary(Dictionary<char, int> keyValues, string anagram)
+    {
+        foreach(char c in anagram)
+        {
+            if (keyValues.ContainsKey(c))
+            {
+                keyValues[c]++;
+            }
+            else
+                keyValues.Add(c, 1);
+        }
+    }
 }
