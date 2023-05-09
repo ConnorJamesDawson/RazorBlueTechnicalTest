@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Task3DataImport T3 = new();
+
+            T3.GrabDataFromCSV();
         }
     }
 }
